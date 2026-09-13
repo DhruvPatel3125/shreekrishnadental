@@ -3,7 +3,7 @@
 Official website for Shree Krishna Dental Hospital (Superspeciality) led by **Dr. Mann V. Thummar** (B.D.S., M.D.S. - Consultant Prosthodontist & Implantologist).
 
 ## 🏥 Hospital Overview
-- **Doctor**: Dr. Mann V. Thummar (19+ Years Experience)
+- **Doctor**: Dr. Mann V. Thummar (20+ Years Experience)
 - **Address**: 304, 3rd Floor, Shubham Doctor House, Sarthana Jakatnaka, Surat
 - **Phone / WhatsApp**: +91 98791 54525
 - **Email**: krishnadental@gmail.com
