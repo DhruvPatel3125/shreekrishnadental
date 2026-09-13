@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block non-content directories
+Disallow: /assets/vendor/
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+# Allow important assets
+Allow: /assets/img/
+
+# Sitemap location
+Sitemap: https://shreekrishnadental.vercel.app/sitemap.xml
