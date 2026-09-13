@@ -1228,114 +1228,149 @@ section,
 
 .hero .hero-visual {
   position: relative;
-  height: 600px;
+  width: 100%;
 }
 
 .hero .hero-visual .main-image {
   position: relative;
-  height: 100%;
-  border-radius: 20px;
+  width: 100%;
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+  border: 4px solid #ffffff;
 }
 
 .hero .hero-visual .main-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 640px;
   object-fit: cover;
+  object-position: center 15%;
+  display: block;
 }
 
 .hero .hero-visual .main-image .floating-card {
   position: absolute;
-  background: var(--surface-color);
-  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 0.85rem 1.15rem;
   border-radius: 16px;
-  box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 85%);
-  backdrop-filter: blur(10px);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  z-index: 5;
 }
 
 .hero .hero-visual .main-image .floating-card.appointment-card {
-  top: 20px;
-  right: 20px;
+  bottom: 20px;
+  left: 20px;
+  top: auto;
+  right: auto;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  min-width: 200px;
+  gap: 0.85rem;
+  max-width: 320px;
 }
 
 .hero .hero-visual .main-image .floating-card.appointment-card .card-icon {
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 .hero .hero-visual .main-image .floating-card.appointment-card .card-content h6 {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.15rem 0;
   color: var(--heading-color);
-  font-weight: 600;
-  font-size: 0.875rem;
+  font-weight: 700;
+  font-size: 0.88rem;
 }
 
 .hero .hero-visual .main-image .floating-card.appointment-card .card-content p {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.15rem 0;
   color: var(--default-color);
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 0.76rem;
+  line-height: 1.25;
 }
 
 .hero .hero-visual .main-image .floating-card.appointment-card .card-content small {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 600;
 }
 
 .hero .hero-visual .main-image .floating-card.rating-card {
-  bottom: 20px;
-  left: 20px;
+  top: 20px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
   text-align: center;
-  min-width: 140px;
+  min-width: 125px;
+  padding: 0.75rem 0.9rem;
 }
 
 .hero .hero-visual .main-image .floating-card.rating-card .rating-stars {
   color: #ffc107;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .hero .hero-visual .main-image .floating-card.rating-card .rating-stars i {
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 .hero .hero-visual .main-image .floating-card.rating-card h6 {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.1rem 0;
   color: var(--heading-color);
   font-weight: 700;
-  font-size: 1.125rem;
+  font-size: 1.05rem;
 }
 
 .hero .hero-visual .main-image .floating-card.rating-card small {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-size: 0.75rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: 0.7rem;
+  font-weight: 500;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
+  .hero .hero-visual {
+    margin-top: 2rem;
+  }
+  .hero .hero-visual .main-image img {
+    max-height: 480px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .hero-visual .main-image img {
+    max-height: 420px;
+    min-height: 340px;
+  }
+
   .hero .hero-visual .main-image .floating-card.appointment-card {
-    right: 10px;
-    top: 10px;
-    padding: 1rem;
-    min-width: 160px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    max-width: calc(100% - 24px);
+    padding: 0.65rem 0.85rem;
+  }
+
+  .hero .hero-visual .main-image .floating-card.appointment-card .card-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
   }
 
   .hero .hero-visual .main-image .floating-card.rating-card {
-    left: 10px;
-    bottom: 10px;
-    padding: 1rem;
-    min-width: 120px;
+    top: 12px;
+    right: 12px;
+    padding: 0.5rem 0.75rem;
+    min-width: 105px;
   }
 }
 
@@ -1544,55 +1579,52 @@ section,
 
 .home-about .about-visual {
   position: relative;
+  width: 100%;
 }
 
 .home-about .about-visual .main-image {
-  border-radius: 8px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border: 4px solid #ffffff;
 }
 
 .home-about .about-visual .main-image img {
   width: 100%;
   height: auto;
+  display: block;
   transition: transform 0.3s ease;
 }
 
 .home-about .about-visual .main-image:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .home-about .about-visual .floating-card {
   position: absolute;
-  bottom: -30px;
-  left: -30px;
-  background-color: var(--surface-color);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 15px 40px color-mix(in srgb, var(--default-color), transparent 90%);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-}
-
-@media (max-width: 768px) {
-  .home-about .about-visual .floating-card {
-    position: static;
-    margin-top: 2rem;
-    left: auto;
-    bottom: auto;
-  }
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.9rem 1.15rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  z-index: 5;
+  max-width: 270px;
 }
 
 .home-about .about-visual .floating-card .card-content {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .home-about .about-visual .floating-card .card-content .icon {
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1601,58 +1633,68 @@ section,
 
 .home-about .about-visual .floating-card .card-content .icon i {
   color: var(--accent-color);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .home-about .about-visual .floating-card .card-content .card-text h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
   line-height: 1.2;
 }
 
 .home-about .about-visual .floating-card .card-content .card-text p {
-  font-size: 0.875rem;
+  font-size: 0.76rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .home-about .about-visual .experience-badge {
   position: absolute;
   top: 20px;
-  right: -20px;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  padding: 1.25rem;
-  border-radius: 8px;
+  right: 20px;
+  background: linear-gradient(135deg, var(--accent-color), #0b5ed7);
+  color: #ffffff;
+  padding: 0.8rem 1.05rem;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 15px 40px color-mix(in srgb, var(--accent-color), transparent 70%);
-}
-
-@media (max-width: 768px) {
-  .home-about .about-visual .experience-badge {
-    position: static;
-    margin-bottom: 2rem;
-    right: auto;
-    top: auto;
-    display: inline-block;
-  }
+  box-shadow: 0 12px 30px rgba(13, 110, 253, 0.3);
+  z-index: 5;
 }
 
 .home-about .about-visual .experience-badge .badge-content .years {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 700;
   line-height: 1;
 }
 
 .home-about .about-visual .experience-badge .badge-content .text {
   display: block;
-  font-size: 0.75rem;
-  font-weight: 400;
-  margin-top: 0.25rem;
-  opacity: 0.9;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-top: 0.2rem;
+  opacity: 0.95;
+}
+
+@media (max-width: 576px) {
+  .home-about .about-visual .floating-card {
+    bottom: 12px;
+    left: 12px;
+    padding: 0.65rem 0.85rem;
+    max-width: calc(100% - 24px);
+  }
+
+  .home-about .about-visual .experience-badge {
+    top: 12px;
+    right: 12px;
+    padding: 0.55rem 0.8rem;
+  }
+  
+  .home-about .about-visual .experience-badge .badge-content .years {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -6325,40 +6367,6 @@ section,
   }
 }
 
-/* Hero Section Mobile Visual Fix */
-@media (max-width: 991px) {
-  .hero .hero-visual {
-    height: auto !important;
-    min-height: 320px !important;
-    margin-top: 2rem;
-  }
-
-  .hero .hero-visual .main-image {
-    height: 320px !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero .hero-visual .main-image {
-    height: 260px !important;
-  }
-
-  .hero .hero-visual .main-image .floating-card.appointment-card {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    margin-top: -30px;
-    z-index: 10;
-    margin-left: 15px;
-    margin-right: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
-  }
-
-  .hero .hero-visual .main-image .floating-card.rating-card {
-    display: none !important;
-  }
-}
-
 /* Mobile & Touch Responsive Enhancements */
 @media (max-width: 768px) {
   .header .logo h1 {
@@ -6411,4 +6419,183 @@ section,
   .header .topbar .contact-info i.bi-phone {
     margin-left: 10px !important;
   }
+}
+
+/*--------------------------------------------------------------
+# Journey Section Styling
+--------------------------------------------------------------*/
+.journey-section {
+  padding: 40px 0;
+}
+
+.journey-section .journey-timeline {
+  position: relative;
+  margin: 30px 0;
+}
+
+.journey-section .timeline-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .journey-section .timeline-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .journey-section .timeline-track {
+    grid-template-columns: 1fr;
+  }
+}
+
+.journey-section .timeline-card {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 20px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.journey-section .timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(13, 110, 253, 0.12);
+  border-color: rgba(13, 110, 253, 0.3);
+}
+
+.journey-section .timeline-year {
+  display: inline-block;
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 12px;
+  margin-bottom: 0.85rem;
+}
+
+.journey-section .timeline-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #112344;
+  margin-bottom: 0.4rem;
+}
+
+.journey-section .timeline-desc {
+  font-size: 0.88rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.journey-section .story-box {
+  background: linear-gradient(145deg, #f8faff, #ffffff);
+  border: 1px solid #e2ecfd;
+  border-radius: 24px;
+  padding: 2.25rem;
+  box-shadow: 0 15px 35px rgba(13, 110, 253, 0.06);
+}
+
+.journey-section .tech-pill {
+  background: #ffffff;
+  border: 1px solid #d0e1fd;
+  color: #0d6efd;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.08);
+}
+
+.journey-section .commitment-card {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(13, 110, 253, 0.22);
+}
+
+/*--------------------------------------------------------------
+# Tech Equipment Section Styling
+--------------------------------------------------------------*/
+.tech-equipment-section {
+  padding: 60px 0;
+  background: #f8faff;
+}
+
+.tech-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eef3fc;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(13, 110, 253, 0.1);
+  border-color: rgba(13, 110, 253, 0.25);
+}
+
+.tech-card .tech-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tech-purpose-card {
+  background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 45px rgba(13, 110, 253, 0.25);
+}
+
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 991px) {
+  .purpose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.purpose-item {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
