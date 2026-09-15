@@ -6548,7 +6548,52 @@ section,
   border-color: rgba(13, 110, 253, 0.25);
 }
 
+/* Image-top card variant — no padding, image flushes to card edges */
+.tech-card-img {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef3fc;
+  transition: all 0.3s ease;
+  height: 100%;
+  padding: 0;
+}
+
+.tech-card-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(13, 110, 253, 0.12);
+  border-color: rgba(13, 110, 253, 0.25);
+}
+
+.tech-card-img .tc-img-wrap {
+  width: 100%;
+  height: 190px;
+  background: #f4f6fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.tech-card-img .tc-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.tech-card-img:hover .tc-img-wrap img {
+  transform: scale(1.07);
+}
+
+.tech-card-img .tc-body {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
 .tech-card .tech-icon-box {
+
   width: 52px;
   height: 52px;
   border-radius: 14px;
