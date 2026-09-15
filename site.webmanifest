@@ -1,0 +1,29 @@
+{
+  "name": "Shree Krishna Dental Clinic",
+  "short_name": "SK Dental",
+  "icons": [
+    {
+      "src": "/assets/img/favicon-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0d6efd",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
