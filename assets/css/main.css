@@ -1245,7 +1245,7 @@ section,
   height: auto;
   max-height: 640px;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 25%;
   display: block;
 }
 
